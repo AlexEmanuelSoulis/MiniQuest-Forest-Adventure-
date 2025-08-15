@@ -3,11 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
     <title>MiniQuest Forest Adventure</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="row">
+            <header id="appHeader">
+                <h1>MiniQuest Forest Adventure</h1>
+                <p><i>Attempt to caputrue them all</i></p>
+            </header>
+
+            <!-- Start Menu -->
+            <section id="screenWelcome" class="screen active" role="region" aria-label="Accueil">
+            <div id="start">
+                
+                <h2>MiniQuest Forest Adventure</h2>
+                <div class="container">
+                    <label>Your Name</label>
+                    <input type="text" required maxlength="15">
+                    <button>Start</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="encounterModal" class="modal hidden" role="dialog" aria-modal="true">
+            <!-- encounter Menu -->
+            <div class="encounter">
+                <h2>A wild creature appears</h2>
+                <button>Fight</button>
+                <button>Catch</button>
+                <button>Run</button>
+            </div>
+        </section>
+
+            <section id="screenMap" class="screen" role="region" aria-label="Carte">
+            <!-- Map -->
+            <div class="row">
+                <div class="col-12">
+                    <h4>Player:</h4>
+                    <h4>Steps:</h4>
+                    <section id="inventoryPanel" class="panel hidden" role="region" aria-label="Inventaire">
+                    <div class="row">
+
+                        <!-- Inventory -->
+                        <div>
+                            <button>Inventory</button>
+                            <div class="col-4"></div>
+                            <div class="col-4"></div>
+                            <div class="col-4"></div>
+                        </div>
+                    </section>
+                           
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="combatPanel" class="panel hidden" role="region" aria-label="Combat">
+        <!-- Combat -->
+        <div class="row">
+            <div class="col-6">
+                <div class="informationCombat">
+                    <span>HP ❤️: </span>
+                    <span>HP: </span>
+                </div>
+                <div>
+                    <button>Attack</button>
+                    <button>Defend</button>
+                    <select name="items" id="items">
+                        <option value="#">Items</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                      </select>               
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <template id="tpl-creature-card">…</template>
+    <div id="toast" aria-live="polite" class="hidden">…</div>
+    <footer id="appFooter">Created by Alex E Soulis 2025</footer>
+    </div>
 </body>
 </html>
